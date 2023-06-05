@@ -20,19 +20,31 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+
+<!--	dependencies：项目具体依赖，-->
 	<dependencies>
+<!--		这里包含了spring-boot-starter-web用于实现HTTP接口（该依赖中包含了Spring MVC）-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+<!--		spring-boot-starter-test用于编写单元测试的依赖包。更多功能模块的使用我们将在后面的教程中逐步展开。-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
+<!--	build：构建配置部分。-->
+<!--	默认使用了spring-boot-maven-plugin，-->
+<!--	配合spring-boot-starter-parent就可以把Spring Boot应用打包成JAR来直接运行。-->
 	<build>
 		<plugins>
 			<plugin>
